@@ -28,6 +28,9 @@ router.use('/api/services', Service.routes())
 const { Order } = require('./src/api/routes/orders/Order')
 router.use('/api/orders', Order.routes())
 
+const { Transaction } = require('./src/api/routes/transactions/Transaction')
+router.use('/api/transactions', Transaction.routes())
+
 app.listen(process.env.PORT, process.env.HOST, async() => {
     await MySQL.sync()
     console.log(`Server running on http://${process.env.HOST}:${process.env.PORT}`)
