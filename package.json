@@ -1,0 +1,25 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "dependencies": {
+        "@koa/cors": "^3.4.1",
+        "axios": "^0.27.2",
+        "bcrypt": "^5.0.1",
+        "dotenv-flow": "^3.2.0",
+        "jsonwebtoken": "^8.5.1",
+        "koa": "^2.13.4",
+        "koa-bodyparser": "^4.3.0",
+        "koa-router": "^12.0.0",
+        "log4js": "^6.6.1",
+        "mysql2": "^2.3.3",
+        "nodemailer": "^6.7.8",
+        "sequelize": "^6.21.6",
+        "validatorjs": "^3.22.1"
+    }
+}
