@@ -78,8 +78,8 @@ module.exports = {
                         }
                     })
                     if (user) {
-                        let amount = transaction.amount
-                        user.balance = user.balance + amount
+                        let amount = +transaction.amount
+                        user.balance = +user.balance + +amount
                         await user.save()
                         transaction.status = 'success'
                         await transaction.save()
