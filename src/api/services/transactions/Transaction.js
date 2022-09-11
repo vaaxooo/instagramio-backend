@@ -113,7 +113,10 @@ module.exports = {
             const transactions = await Transactions.findAll({
                 where: {
                     user_id: user.id
-                }
+                },
+                order: [
+                    ['createdAt', 'DESC']
+                ]
             });
             return {
                 status: true,
