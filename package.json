@@ -19,8 +19,12 @@
         "koa-router": "^12.0.0",
         "log4js": "^6.6.1",
         "mysql2": "^2.3.3",
+        "node-telegram-bot-api": "^0.60.0",
         "nodemailer": "^6.7.8",
         "sequelize": "^6.21.6",
         "validatorjs": "^3.22.1"
+    },
+    "devDependencies": {
+        "@types/node-telegram-bot-api": "^0.57.6"
     }
 }

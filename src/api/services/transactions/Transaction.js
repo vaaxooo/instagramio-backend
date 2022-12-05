@@ -6,6 +6,9 @@ const CryptoJS = require('crypto-js');
 
 const Validator = require('validatorjs');
 
+const TelegramBot = require('node-telegram-bot-api');
+const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true });
+
 module.exports = {
 
     /* Creating a transaction. */
@@ -34,6 +37,15 @@ module.exports = {
                 status: 'pending',
                 signature: signature
             });
+
+            let message = `[instaboost.online]\n\n`;
+            message += `Номер заказа: #${order_id}\n`;
+            message += `Сумма: ${params.amount} USD\n`;
+            message += `Тип: ${params.type}\n`;
+            message += `Статус: ${transaction.status}\n`;
+            message += `Подпись: ${signature}`;
+            bot.sendMessage(process.env.TELEGRAM_CHAT_ID, message);
+
             return {
                 status: true,
                 message: 'Transaction created successfully',
